@@ -20,14 +20,14 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Overpass', serif;
-    font-size: 15px;
+    font-size: min(15px);
     background-color: var(--grey950);
 }
 
 .component-container{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 90vw;
     background-color: #1a2128;
     color: var(--white);
     border-radius: 2rem;
@@ -53,8 +53,8 @@ p {
     display: grid;
     place-items: center;
     background-color: var(--grey500);
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     font-weight: bold;
 }
@@ -92,6 +92,7 @@ button:disabled {
 
 button:enabled {
     background-color: var(--white);
+    transition: all 1s ease 1ms;
 }
 
 button:active {
@@ -119,19 +120,13 @@ button:active {
     margin: 2rem 0 0 0;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 480px) {
     .component-container {
-        width: 350px;
-    }
-
-    .circle {
-        width: 50px;
-        height: 50px;
+        width: 380px;
     }
 }
 
-
-@media screen and (max-height: 900px) {
+@media (orientation: landscape) {
     body {
         padding: 2% 0;
     }
